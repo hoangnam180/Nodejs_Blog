@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1652547778574,
@@ -32,6 +32,46 @@
                 {
                     "date": 1652548289708,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n node_modules/\n-public/css\n\\ No newline at end of file\n+src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548697445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-node_modules/\n+*node_modules/*\n src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548725765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-*node_modules/*\n+node_modules\n src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548734841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-node_modules\n+**/node_modules\n src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548751738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-**/node_modules\n+/node_modules\n src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548769170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n+# dependencies\n /node_modules\n src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548781473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,16 @@\n+First and foremost thing is to add .gitignore file in my-app. Like so in image below.\n+\n+Put .gitignore in the parent folder/directory of node_modules.\n+\n+and next add this in your .gitignore file\n+\n+/node_modules\n+Note\n+You can also add others files too to ignore them to be pushed on github. Here are some more files kept in .gitignore. You can add them according to your requirement. # is just a way to comment in .gitignore file.\n+\n+# See https://help.github.com/ignore-files/ for more about ignoring files.\n+\n # dependencies\n /node_modules\n+\n src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548787907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,4 @@\n-First and foremost thing is to add .gitignore file in my-app. Like so in image below.\n-\n-Put .gitignore in the parent folder/directory of node_modules.\n-\n-and next add this in your .gitignore file\n-\n-/node_modules\n-Note\n-You can also add others files too to ignore them to be pushed on github. Here are some more files kept in .gitignore. You can add them according to your requirement. # is just a way to comment in .gitignore file.\n-\n # See https://help.github.com/ignore-files/ for more about ignoring files.\n \n # dependencies\n /node_modules\n"
+                },
+                {
+                    "date": 1652548803057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,2 @@\n-# See https://help.github.com/ignore-files/ for more about ignoring files.\n \n-# dependencies\n-/node_modules\n-\n src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548822813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n+# dependencies\n+/node_modules\n \n src/public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548828078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n # dependencies\n-/node_modules\n+node_modules/\n \n src/public/css\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1652547778574,
