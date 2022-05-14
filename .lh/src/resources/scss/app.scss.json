@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/resources/scss/app.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1652546546123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1652546650161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n .test{\n     font-size: 1rem;\n-}\n\\ No newline at end of file\n+    background-color: red;\n+}\n"
+                },
+                {
+                    "date": 1652546660798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n .test{\n     font-size: 1rem;\n     background-color: red;\n+    width: 100px;\n }\n"
+                },
+                {
+                    "date": 1652546679593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,10 @@\n .test{\n     font-size: 1rem;\n     background-color: red;\n     width: 100px;\n+    &:hover{\n+        background-color: blue;\n+    }\n+\n+    \n }\n"
+                },
+                {
+                    "date": 1652546691883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +0,0 @@\n-.test{\n-    font-size: 1rem;\n-    background-color: red;\n-    width: 100px;\n-    &:hover{\n-        background-color: blue;\n-    }\n-\n-    \n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652546821695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-\n+.test {\n+    color: red;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547453234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n+@import \"_variable\";\n .test {\n     color: red;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547461004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n-@import \"_variable\";\n+@import \"_variables\";\n .test {\n     color: red;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547490735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n @import \"_variables\";\n .test {\n-    color: red;\n+    color: $red_color;\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1652546546123,
+            "name": "Commit-0",
+            "content": ".test{\n    font-size: 1rem;\n}"
+        }
+    ]
+}

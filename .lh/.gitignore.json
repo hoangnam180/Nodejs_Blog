@@ -1,0 +1,42 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1652547778574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1652547784598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-.node_modules/\n\\ No newline at end of file\n+node_modules\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547790804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-node_modules\n\\ No newline at end of file\n+node_modules/\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547800106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-node_modules/\n\\ No newline at end of file\n+.node_modules\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547810222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-.node_modules\n\\ No newline at end of file\n+node_modules/\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548238051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-node_modules/\n\\ No newline at end of file\n+node_modules/\n+public/css\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652548289708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n node_modules/\n-public/css\n\\ No newline at end of file\n+src/public/css\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1652547778574,
+            "name": "Commit-0",
+            "content": ".node_modules/"
+        }
+    ]
+}

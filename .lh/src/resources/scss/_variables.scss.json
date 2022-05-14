@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/resources/scss/_variables.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1652547480809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1652547620500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-$red_color : red;\n\\ No newline at end of file\n+$red_color : green;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547630408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-$red_color : green;\n\\ No newline at end of file\n+$red_color : red;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547682233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-$red_color : red;\n\\ No newline at end of file\n+$red_color : blue;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652547688016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-$red_color : blue;\n\\ No newline at end of file\n+$red_color : red;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1652547480809,
+            "name": "Commit-0",
+            "content": "$red_color : red;"
+        }
+    ]
+}

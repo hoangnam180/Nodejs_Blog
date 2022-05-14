@@ -1,0 +1,22 @@
+{
+    "sourceFile": "index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1652540454076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1652540464618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const morgan = require('morgan')\n const port = 3000;\n \n app.use(morgan('combined'))\n-app.get('/home', (req, res) => {\n+app.get('/', (req, res) => {\n     return res.send(`<h1>Hello World</h1>`);\n }\n ) // This is the root route\n \n"
+                }
+            ],
+            "date": 1652540454076,
+            "name": "Commit-0",
+            "content": "const express = require('express')\nconst app = express()\nconst morgan = require('morgan')\nconst port = 3000;\n\napp.use(morgan('combined'))\napp.get('/home', (req, res) => {\n    return res.send(`<h1>Hello World</h1>`);\n}\n) // This is the root route\n\napp.listen(port,()=>console.log(`Example app listening at http://localhost:${port}`))"
+        }
+    ]
+}

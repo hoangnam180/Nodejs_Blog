@@ -1,0 +1,142 @@
+{
+    "sourceFile": "src/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 31,
+            "patches": [
+                {
+                    "date": 1652540943033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1652541129151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n-const express = require('express')\n+import express from 'express';\n+import { engine } from 'express-handlebars';\n+const morgan = require('morgan')\n const app = express()\n-const morgan = require('morgan')\n+\n+app.engine('handlebars', engine());\n+app.set('view engine', 'handlebars');\n+app.set('views', './views');\n const port = 3000;\n \n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541141034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import express from 'express';\n+import {express} from 'express';\n import { engine } from 'express-handlebars';\n const morgan = require('morgan')\n const app = express()\n \n"
+                },
+                {
+                    "date": 1652541156064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-import {express} from 'express';\n+const express = require('express')\n+const morgan = require('morgan')\n import { engine } from 'express-handlebars';\n-const morgan = require('morgan')\n const app = express()\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n"
+                },
+                {
+                    "date": 1652541173625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,8 @@\n const express = require('express')\n+const app = express()\n const morgan = require('morgan')\n-import { engine } from 'express-handlebars';\n-const app = express()\n \n-app.engine('handlebars', engine());\n-app.set('view engine', 'handlebars');\n-app.set('views', './views');\n const port = 3000;\n \n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541228135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n const express = require('express')\n const app = express()\n const morgan = require('morgan')\n-\n+import { engine } from 'express-handlebars';\n const port = 3000;\n-\n+app.engine('handlebars', engine());\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n     return res.send(`<h1>Hello World</h1>`);\n }\n"
+                },
+                {
+                    "date": 1652541313516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express')\n const app = express()\n const morgan = require('morgan')\n-import { engine } from 'express-handlebars';\n+const engine = require('express-handlebars')\n const port = 3000;\n app.engine('handlebars', engine());\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541325175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express')\n const app = express()\n const morgan = require('morgan')\n-const engine = require('express-handlebars')\n+const {engine} = require('express-handlebars')\n const port = 3000;\n app.engine('handlebars', engine());\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541390482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n const app = express()\n const morgan = require('morgan')\n const {engine} = require('express-handlebars')\n const port = 3000;\n+\n app.engine('handlebars', engine());\n+app.set('view engine', 'handlebars');\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n     return res.send(`<h1>Hello World</h1>`);\n }\n"
+                },
+                {
+                    "date": 1652541486669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n+app.set('views', './views');\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n     return res.send(`<h1>Hello World</h1>`);\n }\n"
+                },
+                {
+                    "date": 1652541612309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,13 @@\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n app.set('views', './views');\n+\n app.use(morgan('combined'))\n+\n app.get('/', (req, res) => {\n-    return res.send(`<h1>Hello World</h1>`);\n-}\n-) // This is the root route\n+    res.render('home');\n+});\n+// This is the root route\n \n app.listen(port,()=>console.log(`Example app listening at http://localhost:${port}`))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652541680660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', './views');\n+app.set('views', './src/views/home.js');\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541756871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', './src/views/home.js');\n+app.set('views', 'src/views/home');\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541767898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', 'src/views/home');\n+app.set('views', '/src/views/home');\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541778757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', '/src/views/home');\n+app.set('views', 'src/views/home');\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541802910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', 'src/views/home');\n+app.set('views', 'src/resources/views/home');\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541841386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', 'src/resources/views/home');\n+app.set('views', '../src/resources/views/home');\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541847688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', '../src/resources/views/home');\n+app.set('views', 'src/resources/views/home');\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541863288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', 'src/resources/views/home');\n+app.set('views', 'src/resources/views/home.hanldebars');\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652541993118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n const express = require('express')\n+const path = require('path')\n const app = express()\n const morgan = require('morgan')\n-const {engine} = require('express-handlebars')\n+const {engine} = require('express-handlebars');\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', 'src/resources/views/home.hanldebars');\n+app.set('views', path.join(__dirname, 'src/views'));\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652542033723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', path.join(__dirname, 'src/views'));\n+app.set('views', path.join(__dirname, 'resources/views/home'));\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652542065250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n const port = 3000;\n \n app.engine('handlebars', engine());\n app.set('view engine', 'handlebars');\n-app.set('views', path.join(__dirname, 'resources/views/home'));\n+app.set('views', path.join(__dirname, 'resources/views'));\n \n app.use(morgan('combined'))\n \n app.get('/', (req, res) => {\n"
+                },
+                {
+                    "date": 1652544262526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,11 @@\n \n app.get('/', (req, res) => {\n     res.render('home');\n });\n+\n+app.get('/news', (req, res) => {\n+    res.render('news');\n+});\n // This is the root route\n \n app.listen(port,()=>console.log(`Example app listening at http://localhost:${port}`))\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652544552259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n const morgan = require('morgan')\n const {engine} = require('express-handlebars');\n const port = 3000;\n \n-app.engine('handlebars', engine());\n+app.engine('handlebars', engine({\n+    extname: '.hbs',\n+}));\n app.set('view engine', 'handlebars');\n app.set('views', path.join(__dirname, 'resources/views'));\n \n app.use(morgan('combined'))\n"
+                },
+                {
+                    "date": 1652544573650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \n app.engine('handlebars', engine({\n     extname: '.hbs',\n }));\n-app.set('view engine', 'handlebars');\n+app.set('view engine', 'hbs');\n app.set('views', path.join(__dirname, 'resources/views'));\n \n app.use(morgan('combined'))\n \n"
+                },
+                {
+                    "date": 1652544608264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const morgan = require('morgan')\n const {engine} = require('express-handlebars');\n const port = 3000;\n \n-app.engine('handlebars', engine({\n+app.engine('hbs', engine({\n     extname: '.hbs',\n }));\n app.set('view engine', 'hbs');\n app.set('views', path.join(__dirname, 'resources/views'));\n"
+                },
+                {
+                    "date": 1652545379393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,17 @@\n const morgan = require('morgan')\n const {engine} = require('express-handlebars');\n const port = 3000;\n \n+//template engine\n app.engine('hbs', engine({\n     extname: '.hbs',\n }));\n app.set('view engine', 'hbs');\n app.set('views', path.join(__dirname, 'resources/views'));\n \n+//HTTP logger\n app.use(morgan('combined'))\n-\n app.get('/', (req, res) => {\n     res.render('home');\n });\n \n"
+                },
+                {
+                    "date": 1652545680108,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n }));\n app.set('view engine', 'hbs');\n app.set('views', path.join(__dirname, 'resources/views'));\n \n+app.use(express.static(path.join(__dirname, 'public')));\n //HTTP logger\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n     res.render('home');\n"
+                },
+                {
+                    "date": 1652546025584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n app.set('view engine', 'hbs');\n app.set('views', path.join(__dirname, 'resources/views'));\n \n app.use(express.static(path.join(__dirname, 'public')));\n+console.log(path.join(__dirname, 'public'));\n //HTTP logger\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n     res.render('home');\n"
+                },
+                {
+                    "date": 1652546050104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n app.set('view engine', 'hbs');\n app.set('views', path.join(__dirname, 'resources/views'));\n \n app.use(express.static(path.join(__dirname, 'public')));\n-console.log(path.join(__dirname, 'public'));\n+console.log(path.join(__dirname, 'public/img/logo.webp'));\n //HTTP logger\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n     res.render('home');\n"
+                },
+                {
+                    "date": 1652546118747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n app.set('view engine', 'hbs');\n app.set('views', path.join(__dirname, 'resources/views'));\n \n app.use(express.static(path.join(__dirname, 'public')));\n-console.log(path.join(__dirname, 'public/img/logo.webp'));\n //HTTP logger\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n     res.render('home');\n"
+                },
+                {
+                    "date": 1652548264355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n app.set('view engine', 'hbs');\n app.set('views', path.join(__dirname, 'resources/views'));\n \n app.use(express.static(path.join(__dirname, 'public')));\n+\n //HTTP logger\n app.use(morgan('combined'))\n app.get('/', (req, res) => {\n     res.render('home');\n"
+                }
+            ],
+            "date": 1652540943033,
+            "name": "Commit-0",
+            "content": "const express = require('express')\nconst app = express()\nconst morgan = require('morgan')\nconst port = 3000;\n\napp.use(morgan('combined'))\napp.get('/', (req, res) => {\n    return res.send(`<h1>Hello World</h1>`);\n}\n) // This is the root route\n\napp.listen(port,()=>console.log(`Example app listening at http://localhost:${port}`))"
+        }
+    ]
+}

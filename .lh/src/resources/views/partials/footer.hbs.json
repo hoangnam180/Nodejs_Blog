@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/resources/views/partials/footer.hbs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1652544980579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1652545087370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-<footer>Footer</footer>\n\\ No newline at end of file\n+<footer><h1>Footer</h1></footer>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1652544980579,
+            "name": "Commit-0",
+            "content": "<footer>Footer</footer>"
+        }
+    ]
+}

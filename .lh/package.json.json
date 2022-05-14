@@ -1,0 +1,34 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1652540981452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1652541012148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n-    \"start\": \"nodemon --inspect src/ndex.js \",\n+    \"start\": \"nodemon --inspect src/index.js \",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n"
+                },
+                {
+                    "date": 1652546492888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n     \"start\": \"nodemon --inspect src/index.js \",\n+    \"watch\":\"node-sass src/resources/scss/app.scss src/public/css/app.css\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n@@ -22,9 +23,10 @@\n   },\n   \"homepage\": \"https://github.com/hoangnam180/Nodejs_Blog#readme\",\n   \"dependencies\": {\n     \"express\": \"^4.17.3\",\n-    \"express-handlebars\": \"^6.0.6\"\n+    \"express-handlebars\": \"^6.0.6\",\n+    \"node-sass\": \"^7.0.1\"\n   },\n   \"devDependencies\": {\n     \"morgan\": \"^1.10.0\",\n     \"nodemon\": \"^2.0.15\"\n"
+                },
+                {
+                    "date": 1652546621022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n     \"start\": \"nodemon --inspect src/index.js \",\n-    \"watch\":\"node-sass src/resources/scss/app.scss src/public/css/app.css\",\n+    \"watch\":\"node-sass --watch src/resources/scss/app.scss src/public/css/app.css\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n"
+                },
+                {
+                    "date": 1652547659006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n     \"start\": \"nodemon --inspect src/index.js \",\n-    \"watch\":\"node-sass --watch src/resources/scss/app.scss src/public/css/app.css\",\n+    \"watch\":\"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n"
+                }
+            ],
+            "date": 1652540981452,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"blog\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"start\": \"nodemon --inspect src/ndex.js \",\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/hoangnam180/Nodejs_Blog.git\"\n  },\n  \"keywords\": [\n    \"nodejs\",\n    \"Blog\"\n  ],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"bugs\": {\n    \"url\": \"https://github.com/hoangnam180/Nodejs_Blog/issues\"\n  },\n  \"homepage\": \"https://github.com/hoangnam180/Nodejs_Blog#readme\",\n  \"dependencies\": {\n    \"express\": \"^4.17.3\",\n    \"express-handlebars\": \"^6.0.6\"\n  },\n  \"devDependencies\": {\n    \"morgan\": \"^1.10.0\",\n    \"nodemon\": \"^2.0.15\"\n  }\n}\n"
+        }
+    ]
+}
