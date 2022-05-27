@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/app/controllers/NewConTrollers.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1653502776014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1653502783623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n     index = (req, res) => {\n         res.render('news');\n     }\n }\n-module.exports =  NewControllers;\n\\ No newline at end of file\n+module.exports = new NewControllers;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653502884421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,9 @@\n     //[GET] /new\n     index = (req, res) => {\n         res.render('news');\n     }\n+    search = (req, res) => {\n+        res.render('search');\n+    }\n }\n module.exports = new NewControllers;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653502952011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n     index = (req, res) => {\n         res.render('news');\n     }\n     search = (req, res) => {\n-        res.render('search');\n+        res.render('test');\n     }\n }\n module.exports = new NewControllers;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653502971160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     //[GET] /new\n     index = (req, res) => {\n         res.render('news');\n     }\n-    search = (req, res) => {\n+    test = (req, res) => {\n         res.render('test');\n     }\n }\n module.exports = new NewControllers;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653587379599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n class NewControllers {\n-    //[GET] /new\n-    index = (req, res) => {\n-        res.render('news');\n-    }\n-    test = (req, res) => {\n-        res.render('test');\n-    }\n+  //[GET] /new\n+  index = (req, res) => {\n\\ No newline at end of file\n+    res.render('news');\n+  };\n+  test = (req, res) => {\n+    res.render('test');\n+  };\n }\n-module.exports = new NewControllers;\n+module.exports = new NewControllers();\n"
+                }
+            ],
+            "date": 1653502776014,
+            "name": "Commit-0",
+            "content": "class NewControllers {\n    //[GET] /new\n    index = (req, res) => {\n        res.render('news');\n    }\n}\nmodule.exports =  NewControllers;"
+        }
+    ]
+}

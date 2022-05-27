@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1653496790996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1653502284003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+const newRouter = require(\"./news\");\n function route (app){\n     app.get('/', (req, res) => {\n         res.render('home');\n     });\n@@ -12,9 +13,8 @@\n     });\n     \n     app.post('/search', (req, res) => {\n         console.log(\"test\",req.body);\n-    \n         res.send('');\n     });\n }\n module.exports = route;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653502417022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,17 @@\n const newRouter = require(\"./news\");\n function route (app){\n+    // app.get('/news', (req, res) => {\n+    //     res.render('news');\n+    // });\n+    app.use('/news', newRouter);\n+\n+    \n     app.get('/', (req, res) => {\n         res.render('home');\n     });\n     \n-    app.get('/news', (req, res) => {\n-        res.render('news');\n-    });\n+\n     \n     app.get('/search', (req, res) => {\n         res.render('search');\n     });\n"
+                },
+                {
+                    "date": 1653502692455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-const newRouter = require(\"./news\");\n+const newsRouter = require(\"./news\");\n function route (app){\n     // app.get('/news', (req, res) => {\n     //     res.render('news');\n     // });\n-    app.use('/news', newRouter);\n+    app.use('/news', newsRouter);\n \n-    \n+\n     app.get('/', (req, res) => {\n         res.render('home');\n     });\n     \n"
+                },
+                {
+                    "date": 1653577161279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,8 @@\n const newsRouter = require(\"./news\");\n+const siteRouter = require(\"./site\");\n function route (app){\n-    // app.get('/news', (req, res) => {\n-    //     res.render('news');\n-    // });\n     app.use('/news', newsRouter);\n+    app.use('/', newsRouter);\n \n-\n-    app.get('/', (req, res) => {\n-        res.render('home');\n-    });\n-    \n-\n-    \n-    app.get('/search', (req, res) => {\n-        res.render('search');\n-    });\n-    \n-    app.post('/search', (req, res) => {\n-        console.log(\"test\",req.body);\n-        res.send('');\n-    });\n }\n module.exports = route;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653577190680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const newsRouter = require(\"./news\");\n const siteRouter = require(\"./site\");\n function route (app){\n     app.use('/news', newsRouter);\n-    app.use('/', newsRouter);\n+    app.use('/', siteRouter);\n \n }\n module.exports = route;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653577538604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const newsRouter = require(\"./news\");\n const siteRouter = require(\"./site\");\n function route (app){\n     app.use('/news', newsRouter);\n-    app.use('/', siteRouter);\n+    app.use('/', siteRouter);   \n \n }\n module.exports = route;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653587362707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n-const newsRouter = require(\"./news\");\n-const siteRouter = require(\"./site\");\n-function route (app){\n-    app.use('/news', newsRouter);\n-    app.use('/', siteRouter);   \n-\n+const newsRouter = require('./news');\n+const siteRouter = require('./site');\n\\ No newline at end of file\n+function route(app) {\n+  app.use('/news', newsRouter);\n+  app.use('/', siteRouter);\n }\n-module.exports = route;\n+module.exports = route;\n"
+                }
+            ],
+            "date": 1653496790996,
+            "name": "Commit-0",
+            "content": "function route (app){\n    app.get('/', (req, res) => {\n        res.render('home');\n    });\n    \n    app.get('/news', (req, res) => {\n        res.render('news');\n    });\n    \n    app.get('/search', (req, res) => {\n        res.render('search');\n    });\n    \n    app.post('/search', (req, res) => {\n        console.log(\"test\",req.body);\n    \n        res.send('');\n    });\n}\nmodule.exports = route;"
+        }
+    ]
+}

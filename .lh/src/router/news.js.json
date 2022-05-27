@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/router/news.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1653501789954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1653501969798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,5 @@\n const express = require('express');\n-const router = express.Router();\n\\ No newline at end of file\n+const router = express.Router();\n+const controller = require('../app/controllers/newsControllers');\n+\n+module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653502150924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n const express = require('express');\n const router = express.Router();\n-const controller = require('../app/controllers/newsControllers');\n+const newControllers = require('../app/controllers/newsControllers');\n \n\\ No newline at end of file\n-module.exports = router;\n+router.use('/',newControllers.index);\n+\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1653502767142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require('express');\n const router = express.Router();\n-const newControllers = require('../app/controllers/newsControllers');\n+const newControllers = require(\"../app/controllers/NewConTrollers.js\")\n \n router.use('/',newControllers.index);\n \n\\ No newline at end of file\n-module.exports = router;\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1653502786212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n const newControllers = require(\"../app/controllers/NewConTrollers.js\")\n \n router.use('/',newControllers.index);\n \n-module.exports = router;\n\\ No newline at end of file\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1653502978991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n const express = require('express');\n const router = express.Router();\n const newControllers = require(\"../app/controllers/NewConTrollers.js\")\n \n+router.use('/test',newControllers.test);\n router.use('/',newControllers.index);\n \n module.exports = router;\n"
+                },
+                {
+                    "date": 1653577431173,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require('express');\n const router = express.Router();\n-const newControllers = require(\"../app/controllers/NewConTrollers.js\")\n+const newControllers = require(\"../app/controllers/NewConTrollers.js\");\n \n router.use('/test',newControllers.test);\n router.use('/',newControllers.index);\n \n"
+                },
+                {
+                    "date": 1653587361289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\n const router = express.Router();\n-const newControllers = require(\"../app/controllers/NewConTrollers.js\");\n+const newControllers = require('../app/controllers/NewConTrollers.js');\n \n-router.use('/test',newControllers.test);\n-router.use('/',newControllers.index);\n+router.use('/test', newControllers.test);\n+router.use('/', newControllers.index);\n \n module.exports = router;\n"
+                }
+            ],
+            "date": 1653501789954,
+            "name": "Commit-0",
+            "content": "const express = require('express');\nconst router = express.Router();"
+        }
+    ]
+}

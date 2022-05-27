@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/controllers/SiteConTrollers.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1653576910342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1653577028325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+class SiteControllers {\n+    //[GET] /new\n+    index = (req, res) => {\n+        res.render('news');\n+    }\n+    test = (req, res) => {\n+        res.render('test');\n+    }\n+}\n+module.exports = new SiteControllers;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653577309092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n class SiteControllers {\n     //[GET] /new\n     index = (req, res) => {\n-        res.render('news');\n+        res.render('home');\n     }\n-    test = (req, res) => {\n-        res.render('test');\n+    search = (req, res) => {\n+        res.render('search');\n     }\n }\n module.exports = new SiteControllers;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653587381720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n class SiteControllers {\n-    //[GET] /new\n-    index = (req, res) => {\n-        res.render('home');\n-    }\n-    search = (req, res) => {\n-        res.render('search');\n-    }\n+  //[GET] /new\n+  index = (req, res) => {\n\\ No newline at end of file\n+    res.render('home');\n+  };\n+  search = (req, res) => {\n+    res.render('search');\n+  };\n }\n-module.exports = new SiteControllers;\n+module.exports = new SiteControllers();\n"
+                }
+            ],
+            "date": 1653576910342,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

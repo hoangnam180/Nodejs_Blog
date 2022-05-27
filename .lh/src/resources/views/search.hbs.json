@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/resources/views/search.hbs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1652681842908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1652694292921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,18 @@\n-<h1>Search</h1>\n\\ No newline at end of file\n+<div class=\"formsearch\">\n+    <form>\n+        <div class=\"form-group\">\n+            <label for=\"exampleInputEmail1\">Email address</label>\n+            <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n+            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n+        </div>\n+        <div class=\"form-group\">\n+            <label for=\"exampleInputPassword1\">Password</label>\n+            <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\">\n+        </div>\n+        <div class=\"form-check\">\n+            <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">\n+            <label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>\n+        </div>\n+        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n+</form>\n+</div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652694327188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<div class=\"formsearch\">\n+<div class=\"formsearch mt-4\">\n     <form>\n         <div class=\"form-group\">\n             <label for=\"exampleInputEmail1\">Email address</label>\n             <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n"
+                },
+                {
+                    "date": 1652694413810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<div class=\"formsearch mt-4\">\n+<div class=\"formsearch mt-3\">\n     <form>\n         <div class=\"form-group\">\n             <label for=\"exampleInputEmail1\">Email address</label>\n             <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n"
+                },
+                {
+                    "date": 1652694469324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<div class=\"formsearch mt-3\">\n+<div class=\"formsearch m-3\">\n     <form>\n         <div class=\"form-group\">\n             <label for=\"exampleInputEmail1\">Email address</label>\n             <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n"
+                },
+                {
+                    "date": 1652694543036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,10 @@\n <div class=\"formsearch m-3\">\n     <form>\n         <div class=\"form-group\">\n-            <label for=\"exampleInputEmail1\">Email address</label>\n-            <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n+            <label for=\"search\">Từ khóa</label>\n+            <input type=\"text\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n             <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n         </div>\n-        <div class=\"form-group\">\n-            <label for=\"exampleInputPassword1\">Password</label>\n-            <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\">\n-        </div>\n-        <div class=\"form-check\">\n-            <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">\n-            <label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>\n-        </div>\n-        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n+        <button type=\"submit\" class=\"btn btn-primary\">Tìm kiếm</button>\n </form>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652694560570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <div class=\"formsearch m-3\">\n     <form>\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n-            <input type=\"text\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n+            <input type=\"text\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n             <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n         </div>\n         <button type=\"submit\" class=\"btn btn-primary\">Tìm kiếm</button>\n </form>\n"
+                },
+                {
+                    "date": 1652694585716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <div class=\"formsearch m-3\">\n     <form>\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n-            <input type=\"text\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n+            <input type=\"text\" name=\"q\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n             <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n         </div>\n         <button type=\"submit\" class=\"btn btn-primary\">Tìm kiếm</button>\n </form>\n"
+                },
+                {
+                    "date": 1652695793135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <div class=\"formsearch m-3\">\n-    <form>\n+    <form method=\"post\">\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n             <input type=\"text\" name=\"q\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n             <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n         </div>\n         <button type=\"submit\" class=\"btn btn-primary\">Tìm kiếm</button>\n-</form>\n+    </form>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652695825740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <div class=\"formsearch m-3\">\n-    <form method=\"post\">\n+    <form method=\"get\">\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n             <input type=\"text\" name=\"q\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n             <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n"
+                },
+                {
+                    "date": 1652696434790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <div class=\"formsearch m-3\">\n-    <form method=\"get\">\n+    <form method=\"get\" action=\"/news\">\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n             <input type=\"text\" name=\"q\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n             <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n"
+                },
+                {
+                    "date": 1652712579133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <div class=\"formsearch m-3\">\n-    <form method=\"get\" action=\"/news\">\n+    <form method=\"post\" action=\"\">\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n             <input type=\"text\" name=\"q\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n             <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n"
+                },
+                {
+                    "date": 1652712591845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n     <form method=\"post\" action=\"\">\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n             <input type=\"text\" name=\"q\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n-            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>\n         </div>\n         <button type=\"submit\" class=\"btn btn-primary\">Tìm kiếm</button>\n     </form>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1652712875875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <div class=\"formsearch m-3\">\n-    <form method=\"post\" action=\"\">\n+    <form method=\"POST\" action=\"\">\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n             <input type=\"text\" name=\"q\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n         </div>\n"
+                },
+                {
+                    "date": 1652712924785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     <form method=\"POST\" action=\"\">\n         <div class=\"form-group\">\n             <label for=\"search\">Từ khóa</label>\n             <input type=\"text\" name=\"q\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n+            <input type=\"text\" name=\"name\" class=\"form-control\" id=\"search\" aria-describedby=\"emailHelp\" placeholder=\"Nhập từ khóa\">\n         </div>\n         <button type=\"submit\" class=\"btn btn-primary\">Tìm kiếm</button>\n     </form>\n </div>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1652681842908,
+            "name": "Commit-0",
+            "content": "<h1>Search</h1>"
+        }
+    ]
+}

@@ -1,28 +1,37 @@
-const express = require('express')
-const path = require('path')
-const app = express()
-const morgan = require('morgan')
-const {engine} = require('express-handlebars');
+/** @format */
+
+const express = require('express');
+const path = require('path');
+const app = express();
+const morgan = require('morgan');
+const { engine } = require('express-handlebars');
+const newControllers = require('./app/controllers/newControllers');
+const router = require('./router');
 const port = 3000;
 
 //template engine
-app.engine('hbs', engine({
+app.engine(
+  'hbs',
+  engine({
     extname: '.hbs',
-}));
+  }),
+);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-//HTTP logger
-app.use(morgan('combined'))
-app.get('/', (req, res) => {
-    res.render('home');
-});
+//middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.get('/news', (req, res) => {
-    res.render('news');
-});
+//HTTP logger
+app.use(morgan('combined'));
+
 // This is the root route
 
-app.listen(port,()=>console.log(`Example app listening at http://localhost:${port}`))
+router(app);
+
+app.listen(port, () =>
+  console.log(`Example app listening at http://localhost:${port}`),
+);

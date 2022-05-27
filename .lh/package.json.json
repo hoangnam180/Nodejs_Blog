@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1652540981452,
@@ -24,6 +24,30 @@
                 {
                     "date": 1652547659006,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n     \"start\": \"nodemon --inspect src/index.js \",\n-    \"watch\":\"node-sass --watch src/resources/scss/app.scss src/public/css/app.css\",\n+    \"watch\":\"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n"
+                },
+                {
+                    "date": 1653587209616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n+    \"beautiful\": \"prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss}\",\n     \"start\": \"nodemon --inspect src/index.js \",\n-    \"watch\":\"node-sass --watch src/resources/scss/ --output src/public/css/\",\n+    \"watch\": \"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n   \"repository\": {\n     \"type\": \"git\",\n@@ -24,9 +25,12 @@\n   \"homepage\": \"https://github.com/hoangnam180/Nodejs_Blog#readme\",\n   \"dependencies\": {\n     \"express\": \"^4.17.3\",\n     \"express-handlebars\": \"^6.0.6\",\n-    \"node-sass\": \"^7.0.1\"\n+    \"husky\": \"^8.0.1\",\n+    \"lint-staged\": \"^12.4.2\",\n+    \"node-sass\": \"^7.0.1\",\n+    \"prettier\": \"^2.6.2\"\n   },\n   \"devDependencies\": {\n     \"morgan\": \"^1.10.0\",\n     \"nodemon\": \"^2.0.15\"\n"
+                },
+                {
+                    "date": 1653587332620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n-    \"beautiful\": \"prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss}\",\n+    \"beautiful\": \"prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'\",\n     \"start\": \"nodemon --inspect src/index.js \",\n     \"watch\": \"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n"
+                },
+                {
+                    "date": 1653637267745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n-    \"beautiful\": \"prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'\",\n     \"start\": \"nodemon --inspect src/index.js \",\n     \"watch\": \"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n@@ -22,8 +21,11 @@\n   \"bugs\": {\n     \"url\": \"https://github.com/hoangnam180/Nodejs_Blog/issues\"\n   },\n   \"homepage\": \"https://github.com/hoangnam180/Nodejs_Blog#readme\",\n+  \"lint-staged\":{\n+    \"src/**/*.{js,json,scss}\": [\"prettier --single-quote --trailing-comma all --write\"]\n+  },\n   \"dependencies\": {\n     \"express\": \"^4.17.3\",\n     \"express-handlebars\": \"^6.0.6\",\n     \"husky\": \"^8.0.1\",\n"
+                },
+                {
+                    "date": 1653637286816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n+    \"beautiful\": \"prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'\",\n     \"start\": \"nodemon --inspect src/index.js \",\n     \"watch\": \"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n"
+                },
+                {
+                    "date": 1653637306714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n-    \"beautiful\": \"prettier --single-quote --trailing-comma all --write 'src/**/*.{js,json,scss}'\",\n+    \"beautiful\": \"lint-staged\",\n     \"start\": \"nodemon --inspect src/index.js \",\n     \"watch\": \"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n"
+                },
+                {
+                    "date": 1653638273970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n-    \"beautiful\": \"lint-staged\",\n     \"start\": \"nodemon --inspect src/index.js \",\n     \"watch\": \"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n@@ -22,8 +21,13 @@\n   \"bugs\": {\n     \"url\": \"https://github.com/hoangnam180/Nodejs_Blog/issues\"\n   },\n   \"homepage\": \"https://github.com/hoangnam180/Nodejs_Blog#readme\",\n+  \"husky\":{\n+    \"hooks\":{\n+      \"pre-commit\": \"lint-staged\"\n+    }\n+  },\n   \"lint-staged\":{\n     \"src/**/*.{js,json,scss}\": [\"prettier --single-quote --trailing-comma all --write\"]\n   },\n   \"dependencies\": {\n"
                 }
             ],
             "date": 1652540981452,
