@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1652540981452,
@@ -48,6 +48,10 @@
                 {
                     "date": 1653638273970,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n-    \"beautiful\": \"lint-staged\",\n     \"start\": \"nodemon --inspect src/index.js \",\n     \"watch\": \"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n@@ -22,8 +21,13 @@\n   \"bugs\": {\n     \"url\": \"https://github.com/hoangnam180/Nodejs_Blog/issues\"\n   },\n   \"homepage\": \"https://github.com/hoangnam180/Nodejs_Blog#readme\",\n+  \"husky\":{\n+    \"hooks\":{\n+      \"pre-commit\": \"lint-staged\"\n+    }\n+  },\n   \"lint-staged\":{\n     \"src/**/*.{js,json,scss}\": [\"prettier --single-quote --trailing-comma all --write\"]\n   },\n   \"dependencies\": {\n"
+                },
+                {
+                    "date": 1653638353675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n   \"version\": \"1.0.0\",\n   \"description\": \"\",\n   \"main\": \"src/index.js\",\n   \"scripts\": {\n+    \"beautiful\": \"lint-staged\",\n     \"start\": \"nodemon --inspect src/index.js \",\n     \"watch\": \"node-sass --watch src/resources/scss/ --output src/public/css/\",\n     \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n   },\n"
                 }
             ],
             "date": 1652540981452,

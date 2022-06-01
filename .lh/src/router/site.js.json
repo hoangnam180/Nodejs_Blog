@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1653576908176,
@@ -28,6 +28,10 @@
                 {
                     "date": 1653587365451,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\n const router = express.Router();\n-const siteControllers = require(\"../app/controllers/SiteConTrollers\")\n+const siteControllers = require('../app/controllers/SiteConTrollers');\n \n-router.use('/search',siteControllers.search);\n-router.use('/',siteControllers.index);\n+router.use('/search', siteControllers.search);\n\\ No newline at end of file\n+router.use('/', siteControllers.index);\n \n-module.exports = router;\n+module.exports = router;\n"
+                },
+                {
+                    "date": 1653912585991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\n const router = express.Router();\n const siteControllers = require('../app/controllers/SiteConTrollers');\n \n-router.use('/search', siteControllers.search);\n-router.use('/', siteControllers.index);\n+router.get('/search', siteControllers.search);\n+router.get('/', siteControllers.index);\n\\ No newline at end of file\n \n-module.exports = router;\n+module.exports = router;\n"
                 }
             ],
             "date": 1653576908175,

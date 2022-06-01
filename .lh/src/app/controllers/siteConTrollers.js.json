@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1653576910342,
@@ -20,6 +20,26 @@
                 {
                     "date": 1653587381720,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n class SiteControllers {\n-    //[GET] /new\n-    index = (req, res) => {\n-        res.render('home');\n-    }\n-    search = (req, res) => {\n-        res.render('search');\n-    }\n+  //[GET] /new\n+  index = (req, res) => {\n\\ No newline at end of file\n+    res.render('home');\n+  };\n+  search = (req, res) => {\n+    res.render('search');\n+  };\n }\n-module.exports = new SiteControllers;\n+module.exports = new SiteControllers();\n"
+                },
+                {
+                    "date": 1653900901672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\n+const Course = require('../../models/Course')\n class SiteControllers {\n   //[GET] /new\n   index = (req, res) => {\n     res.render('home');\n@@ -6,5 +8,5 @@\n   search = (req, res) => {\n     res.render('search');\n   };\n }\n-module.exports = new SiteControllers();\n\\ No newline at end of file\n+module.exports = new SiteControllers();\n"
+                },
+                {
+                    "date": 1653901083034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,13 @@\n const Course = require('../../models/Course')\n class SiteControllers {\n   //[GET] /new\n   index = (req, res) => {\n-    res.render('home');\n+    Course.find({},(err,courses)=>{\n+      if(!err) res.json(courses)\n+      res.status(500).json({error:err})\n+    })\n+    // res.render('home');\n   };\n   search = (req, res) => {\n     res.render('search');\n   };\n"
+                },
+                {
+                    "date": 1653901167406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n \n const Course = require('../../models/Course')\n class SiteControllers {\n-  //[GET] /new\n   index = (req, res) => {\n     Course.find({},(err,courses)=>{\n       if(!err) res.json(courses)\n       res.status(500).json({error:err})\n"
+                },
+                {
+                    "date": 1653901176037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n \n const Course = require('../../models/Course')\n class SiteControllers {\n+  //[GET] /new\n   index = (req, res) => {\n     Course.find({},(err,courses)=>{\n       if(!err) res.json(courses)\n       res.status(500).json({error:err})\n"
+                },
+                {
+                    "date": 1653901227666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n class SiteControllers {\n   //[GET] /new\n   index = (req, res) => {\n     Course.find({},(err,courses)=>{\n-      if(!err) res.json(courses)\n-      res.status(500).json({error:err})\n+      if(!err) {res.json(courses)}\n+      else{res.status(500).json({error:err})}\n     })\n     // res.render('home');\n   };\n   search = (req, res) => {\n"
                 }
             ],
             "date": 1653576910342,

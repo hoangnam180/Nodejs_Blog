@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1653501789954,
@@ -36,6 +36,10 @@
                 {
                     "date": 1653587361289,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\n const router = express.Router();\n-const newControllers = require(\"../app/controllers/NewConTrollers.js\");\n+const newControllers = require('../app/controllers/NewConTrollers.js');\n \n-router.use('/test',newControllers.test);\n-router.use('/',newControllers.index);\n+router.use('/test', newControllers.test);\n+router.use('/', newControllers.index);\n \n module.exports = router;\n"
+                },
+                {
+                    "date": 1653912579293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const express = require('express');\n const router = express.Router();\n const newControllers = require('../app/controllers/NewConTrollers.js');\n \n-router.use('/test', newControllers.test);\n-router.use('/', newControllers.index);\n+router.get('/test', newControllers.test);\n+router.get('/', newControllers.index);\n \n module.exports = router;\n"
                 }
             ],
             "date": 1653501789954,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 50,
+            "activePatchIndex": 55,
             "patches": [
                 {
                     "date": 1652540943033,
@@ -208,6 +208,26 @@
                 {
                     "date": 1653587615893,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,31 +1,33 @@\n-const express = require('express');\n-const path = require('path');\n+/** @format */\n+\n+const express = require(\"express\");\n+const path = require(\"path\");\n const app = express();\n-const morgan = require('morgan');\n-const { engine } = require('express-handlebars');\n-const newControllers = require('./app/controllers/newControllers');\n-const router = require('./router');\n+const morgan = require(\"morgan\");\n+const { engine } = require(\"express-handlebars\");\n+const newControllers = require(\"./app/controllers/newControllers\");\n+const router = require(\"./router\");\n const port = 3000;\n \n //template engine\n app.engine(\n-  'hbs',\n+  \"hbs\",\n   engine({\n-    extname: '.hbs',\n+    extname: \".hbs\",\n   }),\n );\n-app.set('view engine', 'hbs');\n-app.set('views', path.join(__dirname, 'resources/views'));\n+app.set(\"view engine\", \"hbs\");\n+app.set(\"views\", path.join(__dirname, \"resources/views\"));\n \n-app.use(express.static(path.join(__dirname, 'public')));\n+app.use(express.static(path.join(__dirname, \"public\")));\n \n //middleware\n app.use(express.urlencoded({ extended: true }));\n app.use(express.json());\n \n //HTTP logger\n-app.use(morgan('combined'));\n+app.use(morgan(\"combined\"));\n \n // This is the root route\n \n router(app);\n"
+                },
+                {
+                    "date": 1653638336762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,33 +1,33 @@\n /** @format */\n \n-const express = require(\"express\");\n-const path = require(\"path\");\n+const express = require('express');\n+const path = require('path');\n const app = express();\n-const morgan = require(\"morgan\");\n-const { engine } = require(\"express-handlebars\");\n-const newControllers = require(\"./app/controllers/newControllers\");\n-const router = require(\"./router\");\n+const morgan = require('morgan');\n+const { engine } = require('express-handlebars');\n+const newControllers = require('./app/controllers/newControllers');\n+const router = require('./router');\n const port = 3000;\n \n //template engine\n app.engine(\n-  \"hbs\",\n+  'hbs',\n   engine({\n-    extname: \".hbs\",\n+    extname: '.hbs',\n   }),\n );\n-app.set(\"view engine\", \"hbs\");\n-app.set(\"views\", path.join(__dirname, \"resources/views\"));\n+app.set('view engine', 'hbs');\n+          app.set('views', path.join(__dirname, 'resources/views'));\n \n-app.use(express.static(path.join(__dirname, \"public\")));\n+app.use(express.static(path.join(__dirname, 'public')));\n \n //middleware\n-app.use(express.urlencoded({ extended: true }));\n+        app.use(express.urlencoded({ extended: true }));\n app.use(express.json());\n \n //HTTP logger\n-app.use(morgan(\"combined\"));\n+    app.use(morgan('combined'));\n \n // This is the root route\n \n router(app);\n"
+                },
+                {
+                    "date": 1653641759718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,27 +7,29 @@\n const { engine } = require('express-handlebars');\n const newControllers = require('./app/controllers/newControllers');\n const router = require('./router');\n const port = 3000;\n+const db = require('./config/db');\n \n+db.connect();\n //template engine\n app.engine(\n   'hbs',\n   engine({\n     extname: '.hbs',\n   }),\n );\n app.set('view engine', 'hbs');\n-          app.set('views', path.join(__dirname, 'resources/views'));\n+app.set('views', path.join(__dirname, 'resources/views'));\n \n app.use(express.static(path.join(__dirname, 'public')));\n \n //middleware\n-        app.use(express.urlencoded({ extended: true }));\n+app.use(express.urlencoded({ extended: true }));\n app.use(express.json());\n \n //HTTP logger\n-    app.use(morgan('combined'));\n+app.use(morgan('combined'));\n \n // This is the root route\n \n router(app);\n"
+                },
+                {
+                    "date": 1653912624485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,6 +34,6 @@\n \n router(app);\n \n app.listen(port, () =>\n-  console.log(`Example app listening at http://localhost:${port}`),\n+  console.log(`App app listening at http://localhost:${port}`),\n );\n"
+                },
+                {
+                    "date": 1653912634158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,6 +34,6 @@\n \n router(app);\n \n app.listen(port, () =>\n-  console.log(`App app listening at http://localhost:${port}`),\n+  console.log(`app listening at http://localhost:${port}`),\n );\n"
+                },
+                {
+                    "date": 1653912670238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     extname: '.hbs',\n   }),\n );\n app.set('view engine', 'hbs');\n-app.set('views', path.join(__dirname, 'resources/views'));\n+app.set('views', path.join(__dirname, 'resources','views'));\n \n app.use(express.static(path.join(__dirname, 'public')));\n \n //middleware\n"
                 }
             ],
             "date": 1652540943033,

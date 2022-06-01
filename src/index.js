@@ -8,7 +8,9 @@ const { engine } = require('express-handlebars');
 const newControllers = require('./app/controllers/newControllers');
 const router = require('./router');
 const port = 3000;
+const db = require('./config/db');
 
+db.connect();
 //template engine
 app.engine(
   'hbs',
@@ -17,7 +19,7 @@ app.engine(
   }),
 );
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources','views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -33,5 +35,5 @@ app.use(morgan('combined'));
 router(app);
 
 app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`),
+  console.log(`app listening at http://localhost:${port}`),
 );

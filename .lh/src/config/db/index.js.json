@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/config/db/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1653640961146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1653641467226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,14 @@\n-const connect = ()=>{\n+const mongoose = require('mongoose');\n+const connect = async ()=>{\n+    try {\n+        await mongoose.connect('mongodb://localhost:27017/Blog_dev',{\n\\ No newline at end of file\n+        useNewUrlParser: true,\n+        useUnifiedTopology: true,\n+    });\n+    }catch{\n \n+    }\n+    \n }\n \n-module.exports = connect;\n+module.exports = {connect,};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653641509589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n         await mongoose.connect('mongodb://localhost:27017/Blog_dev',{\n         useNewUrlParser: true,\n         useUnifiedTopology: true,\n     });\n+    console.log('Connected to mongodb');\n     }catch{\n-\n+        console.log('Error in connection');\n     }\n     \n }\n \n"
+                },
+                {
+                    "date": 1653641554476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,5 @@\n     }\n     \n }\n \n-module.exports = {connect,};\n\\ No newline at end of file\n+module.exports = {connect};\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653641774160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         await mongoose.connect('mongodb://localhost:27017/Blog_dev',{\n         useNewUrlParser: true,\n         useUnifiedTopology: true,\n     });\n-    console.log('Connected to mongodb');\n+    console.log('Connected successfully to server');\n     }catch{\n         console.log('Error in connection');\n     }\n     \n"
+                }
+            ],
+            "date": 1653640961146,
+            "name": "Commit-0",
+            "content": "const connect = ()=>{\n\n}\n\nmodule.exports = connect;"
+        }
+    ]
+}

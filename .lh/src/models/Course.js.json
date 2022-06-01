@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/models/Course.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1653900386800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1653900392331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n const mongoose = require('mongoose');\n const Schema = mongoose.Schema;\n-const ObjectId = Schema.ObjectId;\n \n const Course = new Schema({\n   name : {type : String,defaultValue :''},\n   description: String,\n"
+                },
+                {
+                    "date": 1653900432640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,7 @@\n   description: String,\n   image: String,\n   createdAt: {type: Date, default: Date.now},\n   updatedAt: {type: Date, default: Date.now},\n-});\n\\ No newline at end of file\n+});\n+\n+module.exports = mongoose.model('Course', Course);\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1653900824206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n   createdAt: {type: Date, default: Date.now},\n   updatedAt: {type: Date, default: Date.now},\n });\n \n-module.exports = mongoose.model('Course', Course);\n\\ No newline at end of file\n+module.exports = mongoose.model('Course', Course); \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1653900386800,
+            "name": "Commit-0",
+            "content": "const mongoose = require('mongoose');\nconst Schema = mongoose.Schema;\nconst ObjectId = Schema.ObjectId;\n\nconst Course = new Schema({\n  name : {type : String,defaultValue :''},\n  description: String,\n  image: String,\n  createdAt: {type: Date, default: Date.now},\n  updatedAt: {type: Date, default: Date.now},\n});"
+        }
+    ]
+}
